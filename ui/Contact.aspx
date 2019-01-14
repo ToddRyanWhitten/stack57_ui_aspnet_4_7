@@ -4,5 +4,6 @@
     <h2><%: Title %>.</h2>
 
     i can be reached on social media. more on this later.
+    new accounts for google/youtube, twitter, instagram
 
 </asp:Content>
