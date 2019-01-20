@@ -10,51 +10,42 @@
 namespace ui {
     
     
-    public partial class SiteMaster {
+    public partial class Register {
         
         /// <summary>
-        /// googleID control.
+        /// StatusMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox googleID;
+        protected global::System.Web.UI.WebControls.Literal StatusMessage;
         
         /// <summary>
-        /// googleName control.
+        /// UserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox googleName;
+        protected global::System.Web.UI.WebControls.TextBox UserName;
         
         /// <summary>
-        /// googleImageUrl control.
+        /// Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox googleImageUrl;
+        protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// googleEmail control.
+        /// ConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox googleEmail;
-        
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
     }
 }

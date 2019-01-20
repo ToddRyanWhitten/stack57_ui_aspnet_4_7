@@ -8,4 +8,12 @@
     <img src="img/Roskolnikov-von-Busen.jpg" />
     <br />
     This is primary.
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:stack57uidbConnectionString %>' SelectCommand="SELECT [AppName], [AppDesc], [AppUrl] FROM [app]"></asp:SqlDataSource>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="AppName" HeaderText="AppName" SortExpression="AppName"></asp:BoundField>
+            <asp:BoundField DataField="AppDesc" HeaderText="AppDesc" SortExpression="AppDesc"></asp:BoundField>
+            <asp:BoundField DataField="AppUrl" HeaderText="AppUrl" SortExpression="AppUrl"></asp:BoundField>
+        </Columns>
+    </asp:GridView>
 </asp:Content>

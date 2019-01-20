@@ -15,6 +15,17 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="419770690404-q1kbda7ep2qsanm0s1dvbqdj87jej0si.apps.googleusercontent.com" />
+    <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+            document.getElementById('googleID').value = profile.getId();
+            document.getElementById('googleName').value = profile.getName();
+            document.getElementById('googleImageUrl').value = profile.getImageUrl();
+            document.getElementById('googleEmail').value = profile.getEmail();
+        }
+    </script>
 </head>
 <body>
     <form runat="server">
@@ -37,7 +48,27 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
+<%--        <asp:HiddenField ID="googleID" runat="server" />
+        <asp:HiddenField ID="googleName" runat="server" />
+        <asp:HiddenField ID="googleImageURL" runat="server" />
+        <asp:HiddenField ID="googleEmail" runat="server" />
+        
+        <input id="googleID" type="text" />
+        <input id="googleName" type="text" />
+        <input id="googleImageURL" type="text" />
+        <input id="googleEmail" type="text" />--%>
+        <table>
+            <tr>
+            <td>Google ID</td>
+            <td><asp:TextBox ID="googleID" runat="server"></asp:TextBox></td></tr>
+            <tr><td>Google Name</td>
+            <td><asp:TextBox ID="googleName" runat="server"></asp:TextBox></td></tr>
+            <tr><td>Google ImageUrl</td>
+            <td><asp:TextBox ID="googleImageUrl" runat="server"></asp:TextBox></td></tr>
+            <tr><td>Google Email</td>
+            <td><asp:TextBox ID="googleEmail" runat="server"></asp:TextBox></td></tr>
+        </table>
+ 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -54,13 +85,16 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
+                    
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
             </asp:ContentPlaceHolder>
             <hr />
+
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - stack57</p>
             </footer>
